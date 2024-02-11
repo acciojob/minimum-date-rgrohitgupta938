@@ -1,5 +1,11 @@
-function minDate(dates) {
-  //write you code here
+function mindate(dates){
+    const dateArr = dates.map((i) => new Date(i));
+    const minDate = new Date(Math.min(...dateArr));
+    const year = minDate.getFullYear();
+    const month = String(minDate.getMonth()+1).padStart(2,"0");
+    const day = String(minDate.getDate()).padStart(2,"0");
+    const dateFormat = `${year}/${month}/${day}`;
+    return dateFormat;
 }
 
 // Do not change the code
