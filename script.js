@@ -1,4 +1,4 @@
-function mindate(dates){
+function minDate(dates){
     const dateArr = dates.map((i) => new Date(i));
     const minDate = new Date(Math.min(...dateArr));
     const year = minDate.getFullYear();
